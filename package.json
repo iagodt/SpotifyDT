@@ -15,6 +15,12 @@
   "author": "iagodt",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^21.2.3"
+    "electron": "^21.2.3",
+    "fibers": "^5.0.3",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
   }
 }
