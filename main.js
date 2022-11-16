@@ -11,9 +11,9 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  var currentfile = 'login.html'
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile(currentfile)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
