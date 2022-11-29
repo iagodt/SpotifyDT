@@ -1,14 +1,22 @@
-const app = {
-    data(){
-        return {
-            count: 0
-        }
-    },
+const player = {
     methods:{
-        teste(){
-            console.log('teste');
+        shuffle(){
+            console.log('shuffle');
+        },
+        previous(){
+            console.log('previous');
+        },
+        play_pause(){
+            console.log('play_pause');
+        },
+        next(){
+            console.log('next');
+        },
+        repeat(){
+            console.log('repeat');
         }
+
     }
 }
 
-Vue.createApp(app).mount('#app');
+Vue.createApp(player).mount('#player');

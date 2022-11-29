@@ -11,7 +11,7 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-  var currentfile = 'login.html'
+  var currentfile = 'index.html'
   // and load the index.html of the app.
   mainWindow.loadFile(currentfile)
 

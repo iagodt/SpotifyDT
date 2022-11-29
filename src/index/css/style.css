@@ -1,3 +1,60 @@
+html{
+    background: linear-gradient(135.31deg, #771B58 34.69%, #005EA3 163.47%);
+    overflow: hidden;
+}
+body{
+    margin: 0px;
+}
+#layout{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#nav{
+    height: 10%;
+    background-color: #000000;
+
+}
+#display{
+    height: 70%;
+    background-color: #25252560;
+    display: flex;
+}
+#display #playlists{
+    border: 5px solid #702188;
+    width: 50%;
+    border-left: none;
+    border-radius: 0px 11px 11px 0px;
+
+}
+#display #queue{
+    border: 5px solid #702188;
+    width: 50%;
+    border-right: none;
+    border-radius: 11px 0px 0px 11px;
+
+}
+
+#player{
+    height: 143px;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#player svg{
+    fill: #d9d9d9;
+}
+
+#player svg:hover{
+    fill: #702188;
+}
+button{
+    background-color: #252525;
+    border: none;
+}
 
 
 /*# sourceMappingURL=style.css.map */
