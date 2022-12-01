@@ -2,7 +2,8 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const http = require('http')
-var static = require('node-static');
+const express = require('express')
+
 
 function createWindow () {
   // Create the browser window.
@@ -16,13 +17,23 @@ function createWindow () {
   
   var currentfile = 'login.html'
   // and load the index.html of the app.
-  var file =   new(static.Server)(__dirname);
+  var server = express()
 
-  http.createServer(function (req, res) {
-    file.serve(req, res);
-    console.log('Server started');
+  server.set('view engine', 'ejs')
+  server.use(express.static(path.join(__dirname, 'public')))
 
-  }).listen(17280); 
+  server.get(['/', '/login'], function (req, res) {
+    res.setHeader('Content-Type', 'text/html')
+    res.render('login')
+  })
+  server.get('/home', function (req, res) {
+    res.setHeader('Content-Type', 'text/html')
+    res.render('index')
+  })
+
+  server.listen(17280, function () {
+    console.log('Server started')
+  })
 
   mainWindow.loadURL('http://localhost:17280')
 

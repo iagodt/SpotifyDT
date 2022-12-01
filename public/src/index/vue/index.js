@@ -13,7 +13,7 @@ const player = {
             console.log('next');
         },
         repeat(){
-            console.log('ashuasuhasusahua');
+            console.log('repeat bitch!!!');
         }
 
     }
