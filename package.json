@@ -21,6 +21,8 @@
     "sass-loader": "^13.2.0"
   },
   "dependencies": {
-    "node-sass": "^8.0.0"
+    "http-server": "^14.1.1",
+    "node-sass": "^8.0.0",
+    "node-static": "^0.7.11"
   }
 }
