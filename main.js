@@ -23,7 +23,7 @@ function createWindow () {
     file.serve(req, res);
   }).listen(17280);
 
-  mainWindow.loadURL('http://localhost:17280/')
+  mainWindow.loadURL('http://localhost:17280/login.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
