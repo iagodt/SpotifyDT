@@ -1,8 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
-const http = require('http')
 const path = require('path')
-const  fs = require('fs').promises
+const http = require('http')
 var static = require('node-static');
 
 function createWindow () {
@@ -17,16 +16,18 @@ function createWindow () {
   
   var currentfile = 'login.html'
   // and load the index.html of the app.
-  var file = new(static.Server)(__dirname);
+  var file =   new(static.Server)(__dirname);
 
   http.createServer(function (req, res) {
     file.serve(req, res);
-  }).listen(17280);
+    console.log('Server started');
 
-  mainWindow.loadURL('http://localhost:17280/login.html')
+  }).listen(17280); 
+
+  mainWindow.loadURL('http://localhost:17280')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
