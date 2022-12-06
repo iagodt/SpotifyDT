@@ -3,6 +3,7 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const http = require('http')
 const express = require('express')
+const { default: axios } = require('axios')
 
 
 function createWindow () {
@@ -22,20 +23,23 @@ function createWindow () {
   server.set('view engine', 'ejs')
   server.use(express.static(path.join(__dirname, 'public')))
 
-  server.get(['/', '/login'], function (req, res) {
+
+  server.get(['/login'], function (req, res) {
     res.setHeader('Content-Type', 'text/html')
     res.render('login')
   })
-  server.get('/home', function (req, res) {
+  server.get(['/','/home'], function (req, res) {
     res.setHeader('Content-Type', 'text/html')
     res.render('index')
-  })
+  });
 
   server.listen(17280, function () {
-    console.log('Server started')
   })
 
-  mainWindow.loadURL('http://localhost:17280')
+
+
+
+  mainWindow.loadURL('http://localhost:17280/login')
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
