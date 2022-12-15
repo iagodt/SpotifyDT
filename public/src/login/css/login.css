@@ -11,7 +11,13 @@ body{
     display: flex;
     justify-content: center;
 }
-.login{
+#root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#login{
     width: 35%;
     height: 92%;
     margin: 2%;
@@ -21,23 +27,27 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
-.login img{
+#logo{
     width: 80%;
     background-color: #252525;
     margin: 10%;
     margin-top: -15%;
 }
-.login button{
+#login_btn{
     font-family: 'Montserrat', sans-serif;
     display: block;
     width: 60%;
     height: 13%;
-    background-color: #702188;
+    background-color: #702188FF;
     border: none;
     border-radius: 50px;
     color: #d3c4e3;
     margin-left: 20% ;
     margin-right: 20%;
     box-shadow: 5px 5px 36px 9px #000000;
+}
+
+#login_btn:hover{
+    box-shadow: none;
 }
 /*# sourceMappingURL=login.css.map */
